@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: seashell;
+    background-image: url(./img/image1.jpg);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 100px;
+    background-color: rgb(214, 33, 48);
+}
+.logo {
+    font-size: 2rem;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+    letter-spacing: 10px;
+    transition: .5s;
+    color: seashell;
+    text-transform: uppercase;
+}
+.logo span {
+    color: rgb(46, 40, 40);
+}
+
+.dropdown {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+}
+
+.locations, .services {
+    position: relative;
+    
+}
+.locations ul, .services ul {
+    position: absolute;
+    background-color: seashell;
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+.locations a, .services a {
+    color: rgb(35,35,35);
+    text-decoration: none;
+}
+.locations button:focus, .services button:focus {
+    outline: none;
+}
+.locations li, .services li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.locations li:hover, .services li:hover {
+    background-color: rgb(235, 51, 66);
+}
+.locations button:focus + ul,
+.services button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+    
+}
+
+.locations .fas {
+    color: seashell;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -3px;
+    right: -15px;
+}
+.services .fas {
+    color: seashell;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -3px;
+    right: -15px;
+}
+
+.dropdown button, .home {
+    background: none;
+    border: none;
+    color: seashell;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.dropdown button:hover, .home:hover, .fas:hover  {
+    color: rgb(35,35,35);
+    transition: all 0.8s;
+    background-size: contain;
+}
